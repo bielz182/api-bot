@@ -28,12 +28,13 @@ app.get('/', async (req, res)=>{
         
 
     }
+   
     console.log(completo[0].description, completo[0].language,completo[0].created_at)
     console.log(completo[1].description, completo[1].language,completo[1].created_at)
     console.log(completo[2].description, completo[2].language,completo[2].created_at)
     console.log(completo[3].description, completo[3].language,completo[3].created_at)
     console.log(completo[4].description, completo[4].language,completo[4].created_at)
-    
+    res.send(completo[0].description)
 
 
 })
