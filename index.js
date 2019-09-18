@@ -14,7 +14,7 @@ app.get('/:repo', async (req, res)=>{
     const api_url = `https://api.github.com/users/takenet/repos`
     const response = await fetch(api_url)
     const json = await response.json();
-    const resultado = await sortJsonArray(json, 'created_at', 'asc')
+    let resultado = await sortJsonArray(json, 'created_at', 'asc')
 
     let completo = []
 
