@@ -34,7 +34,7 @@ app.get('/', async (req, res)=>{
     console.log(completo[2].description, completo[2].language,completo[2].created_at)
     console.log(completo[3].description, completo[3].language,completo[3].created_at)
     console.log(completo[4].description, completo[4].language,completo[4].created_at)
-    res.send(completo[0])
+    res.send(completo)
 
 
 })
