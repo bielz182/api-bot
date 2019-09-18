@@ -8,7 +8,8 @@ const app = express()
 
 app.use(bodyParser.json())
 
-app.get('/', async (req, res)=>{
+app.get('/:repo', async (req, res)=>{
+    let repo = req.params.repo;
 
     const api_url = `https://api.github.com/users/takenet/repos`
     const response = await fetch(api_url)
@@ -34,7 +35,7 @@ app.get('/', async (req, res)=>{
     console.log(completo[2].description, completo[2].language,completo[2].created_at)
     console.log(completo[3].description, completo[3].language,completo[3].created_at)
     console.log(completo[4].description, completo[4].language,completo[4].created_at)
-    res.send(completo)
+    res.send(completo[repo])
 
 
 })
